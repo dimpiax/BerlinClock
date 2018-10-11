@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F0B1F5B821700DCF00594423 /* BerlinClockModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0B1F5B721700DCF00594423 /* BerlinClockModel.swift */; };
+		F0B1F5BB21700E7000594423 /* GloblaFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0B1F5BA21700E7000594423 /* GloblaFunctions.swift */; };
 		F0C73F4D216E704500644756 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0C73F4C216E704500644756 /* AppDelegate.swift */; };
 		F0C73F4F216E704500644756 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0C73F4E216E704500644756 /* ViewController.swift */; };
 		F0C73F52216E704500644756 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F0C73F50216E704500644756 /* Main.storyboard */; };
@@ -26,6 +28,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		F0B1F5B721700DCF00594423 /* BerlinClockModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BerlinClockModel.swift; sourceTree = "<group>"; };
+		F0B1F5BA21700E7000594423 /* GloblaFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GloblaFunctions.swift; sourceTree = "<group>"; };
 		F0C73F49216E704500644756 /* BerlinClock.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BerlinClock.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F0C73F4C216E704500644756 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F0C73F4E216E704500644756 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -56,6 +60,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F0B1F5B621700D9D00594423 /* models */ = {
+			isa = PBXGroup;
+			children = (
+				F0B1F5B721700DCF00594423 /* BerlinClockModel.swift */,
+			);
+			path = models;
+			sourceTree = "<group>";
+		};
+		F0B1F5B921700E5F00594423 /* utils */ = {
+			isa = PBXGroup;
+			children = (
+				F0B1F5BA21700E7000594423 /* GloblaFunctions.swift */,
+			);
+			path = utils;
+			sourceTree = "<group>";
+		};
 		F0C73F40216E704500644756 = {
 			isa = PBXGroup;
 			children = (
@@ -77,6 +97,8 @@
 		F0C73F4B216E704500644756 /* BerlinClock */ = {
 			isa = PBXGroup;
 			children = (
+				F0B1F5B621700D9D00594423 /* models */,
+				F0B1F5B921700E5F00594423 /* utils */,
 				F0C73F4C216E704500644756 /* AppDelegate.swift */,
 				F0C73F4E216E704500644756 /* ViewController.swift */,
 				F0C73F50216E704500644756 /* Main.storyboard */,
@@ -199,6 +221,8 @@
 			files = (
 				F0C73F4F216E704500644756 /* ViewController.swift in Sources */,
 				F0C73F4D216E704500644756 /* AppDelegate.swift in Sources */,
+				F0B1F5BB21700E7000594423 /* GloblaFunctions.swift in Sources */,
+				F0B1F5B821700DCF00594423 /* BerlinClockModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
