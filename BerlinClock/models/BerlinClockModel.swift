@@ -9,7 +9,7 @@
 import Foundation
 
 struct BerlinClockModel {
-    static func convertBerlinTime(value: String, dateFormat: String = "HH:mm:ss", include: Set<UnitType> = Set(UnitType.allValues)) -> String {
+    static func convertBerlinTime(value: String, dateFormat: String = "HH:mm:ss", include: Set<UnitType> = Set(UnitType.allValues)) throws -> String {
         let rawDict: [UnitType] = [
             .seconds,
             .singleMinutes,
@@ -38,18 +38,22 @@ struct BerlinClockModel {
                 }
             }
         
-        let date = Calendar.current.date(from: dataComponents)!
+        guard let date = Calendar.current.date(from: dataComponents) else {
+            throw TranslationError.DateComponents
+        }
+        
         let formatter = DateFormatter()
         formatter.dateFormat = dateFormat
         return formatter.string(from: date)
     }
     
-    static func convertDigitalTime(value: String, dateFormat: String = "HH:mm:ss", include: Set<UnitType> = Set(UnitType.allValues)) -> String {
+    static func convertDigitalTime(value: String, dateFormat: String = "HH:mm:ss", include: Set<UnitType> = Set(UnitType.allValues)) throws -> String {
         let formatter = DateFormatter()
         formatter.dateFormat = dateFormat
         
-        // TODO: update function to throws specific errors
-        let date = formatter.date(from: value)!
+        guard let date = formatter.date(from: value) else {
+            throw TranslationError.DateFormat(value, dateFormat)
+        }
         
         let dateComponents = Calendar.current.dateComponents([
             .second,

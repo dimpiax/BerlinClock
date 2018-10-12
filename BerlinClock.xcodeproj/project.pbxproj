@@ -23,6 +23,7 @@
 		F0C73F57216E704700644756 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F0C73F55216E704700644756 /* LaunchScreen.storyboard */; };
 		F0C73F62216E704700644756 /* BerlinClockTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0C73F61216E704700644756 /* BerlinClockTests.swift */; };
 		F0E9FC1F2170DD03002B762A /* LanguageConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0E9FC1E2170DD03002B762A /* LanguageConverter.swift */; };
+		F0E9FC222170DECA002B762A /* TranslationError.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0E9FC212170DECA002B762A /* TranslationError.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +57,7 @@
 		F0C73F61216E704700644756 /* BerlinClockTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BerlinClockTests.swift; sourceTree = "<group>"; };
 		F0C73F63216E704700644756 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F0E9FC1E2170DD03002B762A /* LanguageConverter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageConverter.swift; sourceTree = "<group>"; };
+		F0E9FC212170DECA002B762A /* TranslationError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranslationError.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -142,6 +144,7 @@
 		F0C73F4B216E704500644756 /* BerlinClock */ = {
 			isa = PBXGroup;
 			children = (
+				F0E9FC202170DE79002B762A /* errors */,
 				F0B1F5C621701C8100594423 /* enums */,
 				F0B1F5BD2170131C00594423 /* data */,
 				F0B1F5BC2170131600594423 /* protocols */,
@@ -164,6 +167,14 @@
 				F0C73F63216E704700644756 /* Info.plist */,
 			);
 			path = BerlinClockTests;
+			sourceTree = "<group>";
+		};
+		F0E9FC202170DE79002B762A /* errors */ = {
+			isa = PBXGroup;
+			children = (
+				F0E9FC212170DECA002B762A /* TranslationError.swift */,
+			);
+			path = errors;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -273,6 +284,7 @@
 				F0C487BA217027F2003D2080 /* SingleHours.swift in Sources */,
 				F0C73F4D216E704500644756 /* AppDelegate.swift in Sources */,
 				F0B1F5C821701C8E00594423 /* UnitType.swift in Sources */,
+				F0E9FC222170DECA002B762A /* TranslationError.swift in Sources */,
 				F0E9FC1F2170DD03002B762A /* LanguageConverter.swift in Sources */,
 				F0B1F5BB21700E7000594423 /* GloblaFunctions.swift in Sources */,
 				F0B1F5B821700DCF00594423 /* BerlinClockModel.swift in Sources */,
