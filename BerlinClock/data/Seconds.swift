@@ -9,11 +9,13 @@
 import Foundation
 
 struct Seconds: Unitable {
-    init(fromDate: Date) {
-        notImplemented()
+    private(set) var string: String = ""
+    
+    init(fromInt value: Int) {
+        string = value % 2 == 1 ? "O" : "Y"
     }
     
-    init(fromString: String) {
-        notImplemented()
+    init(fromString value: String) {
+        string = value
     }
 }

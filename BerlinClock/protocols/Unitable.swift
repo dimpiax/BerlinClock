@@ -9,6 +9,8 @@
 import Foundation
 
 protocol Unitable {
-    init(fromDate: Date)
+    var string: String { get }
+    
+    init(fromInt: Int)
     init(fromString: String)
 }

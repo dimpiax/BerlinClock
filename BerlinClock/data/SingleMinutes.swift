@@ -9,11 +9,16 @@
 import Foundation
 
 struct SingleMinutes: Unitable {
-    init(fromDate: Date) {
-        notImplemented()
+    private(set) var string: String = ""
+    
+    init(fromInt value: Int) {
+        let value = value % 5
+        string = (0..<4)
+            .map { index in index >= value ? "O" : "Y" }
+            .reduce("", +)
     }
     
-    init(fromString: String) {
-        notImplemented()
+    init(fromString value: String) {
+        string = value
     }
 }

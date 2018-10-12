@@ -14,6 +14,26 @@ struct BerlinClockModel {
     }
     
     static func convertDigitalTime(value: String, dateFormat: String = "HH:mm:ss") -> String {
-        notImplemented()
+        let formatter = DateFormatter()
+        formatter.dateFormat = dateFormat
+        
+        // TODO: update function to throws specific errors
+        let date = formatter.date(from: value)!
+        
+        let dateComponents = Calendar.current.dateComponents([.second, .minute], from: date)
+        
+        let rawDict: [UnitType: Int?] = [
+            .seconds: dateComponents.second,
+            .singleMinutes: dateComponents.minute,
+        ]
+        
+        let dict = rawDict.compactMap { $0.1 == nil ? nil : ($0.0, $0.1!) }
+        let result = dict
+            .map { pair in pair.0.entity.init(fromInt: pair.1) }
+            .map { $0.string }
+        
+        print(result)
+        
+        return ""
     }
 }

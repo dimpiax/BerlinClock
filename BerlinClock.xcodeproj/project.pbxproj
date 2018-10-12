@@ -12,6 +12,7 @@
 		F0B1F5BF2170132700594423 /* Unitable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0B1F5BE2170132700594423 /* Unitable.swift */; };
 		F0B1F5C12170133400594423 /* Seconds.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0B1F5C02170133400594423 /* Seconds.swift */; };
 		F0B1F5C32170134500594423 /* SingleMinutes.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0B1F5C22170134500594423 /* SingleMinutes.swift */; };
+		F0B1F5C821701C8E00594423 /* UnitType.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0B1F5C721701C8E00594423 /* UnitType.swift */; };
 		F0C73F4D216E704500644756 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0C73F4C216E704500644756 /* AppDelegate.swift */; };
 		F0C73F4F216E704500644756 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0C73F4E216E704500644756 /* ViewController.swift */; };
 		F0C73F52216E704500644756 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F0C73F50216E704500644756 /* Main.storyboard */; };
@@ -36,6 +37,7 @@
 		F0B1F5BE2170132700594423 /* Unitable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Unitable.swift; sourceTree = "<group>"; };
 		F0B1F5C02170133400594423 /* Seconds.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Seconds.swift; sourceTree = "<group>"; };
 		F0B1F5C22170134500594423 /* SingleMinutes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleMinutes.swift; sourceTree = "<group>"; };
+		F0B1F5C721701C8E00594423 /* UnitType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnitType.swift; sourceTree = "<group>"; };
 		F0C73F49216E704500644756 /* BerlinClock.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BerlinClock.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F0C73F4C216E704500644756 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F0C73F4E216E704500644756 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -99,6 +101,14 @@
 			path = data;
 			sourceTree = "<group>";
 		};
+		F0B1F5C621701C8100594423 /* enums */ = {
+			isa = PBXGroup;
+			children = (
+				F0B1F5C721701C8E00594423 /* UnitType.swift */,
+			);
+			path = enums;
+			sourceTree = "<group>";
+		};
 		F0C73F40216E704500644756 = {
 			isa = PBXGroup;
 			children = (
@@ -120,6 +130,7 @@
 		F0C73F4B216E704500644756 /* BerlinClock */ = {
 			isa = PBXGroup;
 			children = (
+				F0B1F5C621701C8100594423 /* enums */,
 				F0B1F5BD2170131C00594423 /* data */,
 				F0B1F5BC2170131600594423 /* protocols */,
 				F0B1F5B621700D9D00594423 /* models */,
@@ -247,6 +258,7 @@
 				F0C73F4F216E704500644756 /* ViewController.swift in Sources */,
 				F0B1F5BF2170132700594423 /* Unitable.swift in Sources */,
 				F0C73F4D216E704500644756 /* AppDelegate.swift in Sources */,
+				F0B1F5C821701C8E00594423 /* UnitType.swift in Sources */,
 				F0B1F5BB21700E7000594423 /* GloblaFunctions.swift in Sources */,
 				F0B1F5B821700DCF00594423 /* BerlinClockModel.swift in Sources */,
 				F0B1F5C12170133400594423 /* Seconds.swift in Sources */,
