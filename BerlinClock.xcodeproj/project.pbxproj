@@ -13,6 +13,9 @@
 		F0B1F5C12170133400594423 /* Seconds.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0B1F5C02170133400594423 /* Seconds.swift */; };
 		F0B1F5C32170134500594423 /* SingleMinutes.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0B1F5C22170134500594423 /* SingleMinutes.swift */; };
 		F0B1F5C821701C8E00594423 /* UnitType.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0B1F5C721701C8E00594423 /* UnitType.swift */; };
+		F0C487B621702327003D2080 /* FiveMinutes.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0C487B521702327003D2080 /* FiveMinutes.swift */; };
+		F0C487B821702665003D2080 /* FiveHours.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0C487B721702665003D2080 /* FiveHours.swift */; };
+		F0C487BA217027F2003D2080 /* SingleHours.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0C487B9217027F2003D2080 /* SingleHours.swift */; };
 		F0C73F4D216E704500644756 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0C73F4C216E704500644756 /* AppDelegate.swift */; };
 		F0C73F4F216E704500644756 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0C73F4E216E704500644756 /* ViewController.swift */; };
 		F0C73F52216E704500644756 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F0C73F50216E704500644756 /* Main.storyboard */; };
@@ -38,6 +41,9 @@
 		F0B1F5C02170133400594423 /* Seconds.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Seconds.swift; sourceTree = "<group>"; };
 		F0B1F5C22170134500594423 /* SingleMinutes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleMinutes.swift; sourceTree = "<group>"; };
 		F0B1F5C721701C8E00594423 /* UnitType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnitType.swift; sourceTree = "<group>"; };
+		F0C487B521702327003D2080 /* FiveMinutes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FiveMinutes.swift; sourceTree = "<group>"; };
+		F0C487B721702665003D2080 /* FiveHours.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FiveHours.swift; sourceTree = "<group>"; };
+		F0C487B9217027F2003D2080 /* SingleHours.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleHours.swift; sourceTree = "<group>"; };
 		F0C73F49216E704500644756 /* BerlinClock.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BerlinClock.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F0C73F4C216E704500644756 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F0C73F4E216E704500644756 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -97,6 +103,9 @@
 			children = (
 				F0B1F5C02170133400594423 /* Seconds.swift */,
 				F0B1F5C22170134500594423 /* SingleMinutes.swift */,
+				F0C487B521702327003D2080 /* FiveMinutes.swift */,
+				F0C487B9217027F2003D2080 /* SingleHours.swift */,
+				F0C487B721702665003D2080 /* FiveHours.swift */,
 			);
 			path = data;
 			sourceTree = "<group>";
@@ -256,12 +265,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				F0C73F4F216E704500644756 /* ViewController.swift in Sources */,
+				F0C487B821702665003D2080 /* FiveHours.swift in Sources */,
 				F0B1F5BF2170132700594423 /* Unitable.swift in Sources */,
+				F0C487BA217027F2003D2080 /* SingleHours.swift in Sources */,
 				F0C73F4D216E704500644756 /* AppDelegate.swift in Sources */,
 				F0B1F5C821701C8E00594423 /* UnitType.swift in Sources */,
 				F0B1F5BB21700E7000594423 /* GloblaFunctions.swift in Sources */,
 				F0B1F5B821700DCF00594423 /* BerlinClockModel.swift in Sources */,
 				F0B1F5C12170133400594423 /* Seconds.swift in Sources */,
+				F0C487B621702327003D2080 /* FiveMinutes.swift in Sources */,
 				F0B1F5C32170134500594423 /* SingleMinutes.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
