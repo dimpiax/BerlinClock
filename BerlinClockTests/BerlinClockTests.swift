@@ -51,6 +51,25 @@ class BerlinClockTests: XCTestCase {
     }
     
     func testBerlinTime() {
-        // TODO:
+        XCTAssertEqual(BerlinClockModel.convertBerlinTime(value: "OOOO", include: [.singleMinutes]), "00:00:00")
+        XCTAssertEqual(BerlinClockModel.convertBerlinTime(value: "OOOOOOOOOOO", include: [.fiveMinutes]), "00:00:00")
+        XCTAssertEqual(BerlinClockModel.convertBerlinTime(value: "OOOO", include: [.singleHours]), "00:00:00")
+        XCTAssertEqual(BerlinClockModel.convertBerlinTime(value: "OOOO", include: [.fiveHours]), "00:00:00")
+        XCTAssertEqual(BerlinClockModel.convertBerlinTime(value: "O", include: [.seconds]), "00:00:01")
+        
+        XCTAssertEqual(BerlinClockModel.convertBerlinTime(value: "YOOOOOOOOOOOOOOOOOOOOOOO"), "00:00:00")
+        XCTAssertEqual(BerlinClockModel.convertBerlinTime(value: "ORRRRRRROYYRYYRYYRYYYYYY", include: [.singleMinutes]), "00:04:00")
+        XCTAssertEqual(BerlinClockModel.convertBerlinTime(value: "ORRRRRRROYYRYYRYYRYYYYYY", include: [.fiveMinutes]), "00:55:00")
+        XCTAssertEqual(BerlinClockModel.convertBerlinTime(value: "ORRRRRRROYYRYYRYYRYYYYYY", include: [.singleHours]), "03:00:00")
+        XCTAssertEqual(BerlinClockModel.convertBerlinTime(value: "ORRRRRRROYYRYYRYYRYYYYYY", include: [.fiveHours]), "20:00:00")
+        XCTAssertEqual(BerlinClockModel.convertBerlinTime(value: "ORRRRRRROYYRYYRYYRYYYYYY", include: [.seconds]), "00:00:01")
+        
+        XCTAssertEqual(BerlinClockModel.convertBerlinTime(value: "YYRYYRYYRYO", include: [.fiveMinutes]), "00:50:00")
+        XCTAssertEqual(BerlinClockModel.convertBerlinTime(value: "ORROOROOOYYRYYRYOOOOYYOO"), "11:37:01")
+        
+        XCTAssertEqual(BerlinClockModel.convertBerlinTime(value: "YOOOOOOOOOOOOOOOOOOOOOOO"), "00:00:00")
+        XCTAssertEqual(BerlinClockModel.convertBerlinTime(value: "ORRRRRRROYYRYYRYYRYYYYYY"), "23:59:01")
+        XCTAssertEqual(BerlinClockModel.convertBerlinTime(value: "YRRROROOOYYRYYRYYRYOOOOO"), "16:50:00")
+        XCTAssertEqual(BerlinClockModel.convertBerlinTime(value: "ORROOROOOYYRYYRYOOOOYYOO"), "11:37:01")
     }
 }

@@ -9,17 +9,25 @@
 import Foundation
 
 struct SingleMinutes: Unitable {
+    static var count: Int { return 4 }
+    static var delimiter: Int { return 5 }
+    
+    private(set) var int: Int = 0
     private(set) var string: String = ""
     
     init(fromInt value: Int) {
-        let value = value % 5
+        int = value
         
-        string = (0..<4)
+        let value = value % SingleMinutes.delimiter
+        string = (0..<SingleMinutes.count)
             .map { index in index >= value ? "O" : "Y" }
             .reduce("", +)
     }
     
     init(fromString value: String) {
+        let index = value.split(separator: "O").first?.count ?? 0
+        
+        int = index % SingleMinutes.delimiter
         string = value
     }
 }

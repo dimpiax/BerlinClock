@@ -22,6 +22,7 @@
 		F0C73F54216E704700644756 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F0C73F53216E704700644756 /* Assets.xcassets */; };
 		F0C73F57216E704700644756 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F0C73F55216E704700644756 /* LaunchScreen.storyboard */; };
 		F0C73F62216E704700644756 /* BerlinClockTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0C73F61216E704700644756 /* BerlinClockTests.swift */; };
+		F0E9FC1F2170DD03002B762A /* LanguageConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0E9FC1E2170DD03002B762A /* LanguageConverter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +55,7 @@
 		F0C73F5D216E704700644756 /* BerlinClockTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BerlinClockTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F0C73F61216E704700644756 /* BerlinClockTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BerlinClockTests.swift; sourceTree = "<group>"; };
 		F0C73F63216E704700644756 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F0E9FC1E2170DD03002B762A /* LanguageConverter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageConverter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +88,7 @@
 			isa = PBXGroup;
 			children = (
 				F0B1F5BA21700E7000594423 /* GloblaFunctions.swift */,
+				F0E9FC1E2170DD03002B762A /* LanguageConverter.swift */,
 			);
 			path = utils;
 			sourceTree = "<group>";
@@ -270,6 +273,7 @@
 				F0C487BA217027F2003D2080 /* SingleHours.swift in Sources */,
 				F0C73F4D216E704500644756 /* AppDelegate.swift in Sources */,
 				F0B1F5C821701C8E00594423 /* UnitType.swift in Sources */,
+				F0E9FC1F2170DD03002B762A /* LanguageConverter.swift in Sources */,
 				F0B1F5BB21700E7000594423 /* GloblaFunctions.swift in Sources */,
 				F0B1F5B821700DCF00594423 /* BerlinClockModel.swift in Sources */,
 				F0B1F5C12170133400594423 /* Seconds.swift in Sources */,

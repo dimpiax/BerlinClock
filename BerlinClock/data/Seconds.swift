@@ -9,13 +9,19 @@
 import Foundation
 
 struct Seconds: Unitable {
+    static var count: Int { return 1 }
+    static var delimiter: Int { return 2 }
+    
+    private(set) var int: Int = 0
     private(set) var string: String = ""
     
     init(fromInt value: Int) {
-        string = value % 2 == 1 ? "O" : "Y"
+        int = value
+        string = value % Seconds.delimiter == 1 ? "O" : "Y"
     }
     
     init(fromString value: String) {
+        int = value == "O" ? 1 : 0
         string = value
     }
 }

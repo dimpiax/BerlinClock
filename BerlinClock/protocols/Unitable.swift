@@ -9,6 +9,10 @@
 import Foundation
 
 protocol Unitable {
+    static var count: Int { get }
+    static var delimiter: Int { get }
+    
+    var int: Int { get }
     var string: String { get }
     
     init(fromInt: Int)

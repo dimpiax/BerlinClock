@@ -9,8 +9,39 @@
 import Foundation
 
 struct BerlinClockModel {
-    static func convertBerlinTime(value: String) -> String {
-        notImplemented()
+    static func convertBerlinTime(value: String, dateFormat: String = "HH:mm:ss", include: Set<UnitType> = Set(UnitType.allValues)) -> String {
+        let rawDict: [UnitType] = [
+            .seconds,
+            .singleMinutes,
+            .fiveMinutes,
+            .singleHours,
+            .fiveHours,
+        ]
+            .filter(include.contains)
+        
+        let pairs = rawDict.map { ($0, LanguageConverter.prepare(value: value, for: $0)) }
+        let dict = Dictionary(uniqueKeysWithValues: pairs)
+
+        // set default values for accumulation
+        var dataComponents = DateComponents(hour: 0, minute: 0)
+        
+        // fill data components with evaluated data
+        dict
+            .map { pair in (key: pair.key, value: pair.key.entity.init(fromString: pair.value).int) }
+            .forEach { pair in
+                switch pair.key {
+                case .seconds: dataComponents.second = pair.value
+                case .singleMinutes: dataComponents.minute! += pair.value
+                case .fiveMinutes: dataComponents.minute! += pair.value
+                case .singleHours: dataComponents.hour! += pair.value
+                case .fiveHours: dataComponents.hour! += pair.value
+                }
+            }
+        
+        let date = Calendar.current.date(from: dataComponents)!
+        let formatter = DateFormatter()
+        formatter.dateFormat = dateFormat
+        return formatter.string(from: date)
     }
     
     static func convertDigitalTime(value: String, dateFormat: String = "HH:mm:ss", include: Set<UnitType> = Set(UnitType.allValues)) -> String {
@@ -37,7 +68,7 @@ struct BerlinClockModel {
         
         let dict = rawDict.compactMap { $0.1 == nil ? nil : ($0.0, $0.1!) }
         let result = dict
-            .sorted(by: { $0.0.rawValue - $1.0.rawValue > 0 })
+            .sorted(by: { $0.0.index - $1.0.index < 0 })
             .map { pair in pair.0.entity.init(fromInt: pair.1) }
             .map { $0.string }
         
